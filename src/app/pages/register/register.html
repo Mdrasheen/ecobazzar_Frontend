@@ -1,1 +1,32 @@
-<h2>Register Page</h2>
+<div class="register-page">
+  <div class="register-box">
+    <h2>Create Account</h2>
+
+    <form [formGroup]="regForm" (ngSubmit)="submit()">
+      <input
+        type="text"
+        placeholder="Full Name"
+        formControlName="name"
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <button type="submit">Register</button>
+
+      <p class="login-link">
+        Already have an account?
+        <a routerLink="/login">Sign in</a>
+      </p>
+    </form>
+  </div>
+</div>

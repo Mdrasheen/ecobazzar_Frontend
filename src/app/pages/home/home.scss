@@ -1,0 +1,130 @@
+// Whole page layout
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  font-family: 'Poppins', sans-serif;
+}
+
+// Navbar section
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+// Logo styling
+.logo h1 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+// Navigation links
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+      color: #2e7d32;
+    }
+  }
+}
+
+// Right-side buttons (Login/Register)
+.nav-actions {
+  display: flex;
+  gap: 12px;
+
+  .login-btn,
+  .register-btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-btn {
+    background-color: transparent;
+    color: #2e7d32;
+    border: 1.5px solid #2e7d32;
+
+    &:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+  }
+
+  .register-btn {
+    background-color: #2e7d32;
+    color: white;
+
+    &:hover {
+      background-color: #1b5e20;
+    }
+  }
+}
+
+// Hero section (centered welcome text)
+.hero-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+
+  h2 {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+  }
+}
+
+// Responsive tweaks for mobile view
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-actions {
+    margin-top: 10px;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+}
